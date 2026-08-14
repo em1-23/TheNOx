@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Regular';
+  src: url(Fonts/barada-reqa.ttf);
+}
+@font-face {
+  font-family: 'Regular two';
+  src: url(Fonts/Arsenica-Arabic-Extrabold-TRIAL.ttf);
+}
+@font-face {
+  font-family: 'Regular three';
+  src: url(Fonts/koftarabic-extralight.otf);
+}
+:root{
+  --Background-Color:#041f2f;
+  --Color:#ffffff;
+  --Special-Color:#285288;
+  --Font-family:'Regular three';
+  --Font-size:16px;
+}
+html{
+  background-color:var(--Background-Color);
+  color: var(--Color);
+  font-family: var(--Font-family);
+  font-size: var(--Font-size);
+}
+.Name{
+  font-size: calc(var(--Font-size) * 2);
+}
+.Name.en{
+  font-size: calc(var(--Font-size) * 1.5);
+}
+.ar{
+  font-family: 'Regular';
+}
+.en{
+  font-family: 'Regular two';
+}
+.Header{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.toDown{
+  #ToDown{
+    display: none;
+  }
+  .LabelForSliderDown{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    transition: all .3s ease;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    /* rotate: 90deg; */
+    border-radius: 50%;
+    background-color: var(--Special-Color);
+  }
+  #ToDown:checked ~ .LabelForSliderDown{
+    rotate: 180deg;
+  }
+}
