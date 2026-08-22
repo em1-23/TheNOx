@@ -11,54 +11,207 @@
   src: url(Fonts/koftarabic-extralight.otf);
 }
 :root{
-  --Background-Color:#041f2f;
-  --Color:#ffffff;
-  --Special-Color:#285288;
-  --Font-family:'Regular three';
-  --Font-size:16px;
+  --BackgroundColor:#1f1f1f;
+  --Color:#f7f5f5;
+  --Special-Color: #1080e2;
+  --Font-family:'Regular Three';
+  --Font-size:12px;
 }
 html{
-  background-color:var(--Background-Color);
-  color: var(--Color);
+  background-color:var(--BackgroundColor);
   font-family: var(--Font-family);
   font-size: var(--Font-size);
-}
-.Name{
-  font-size: calc(var(--Font-size) * 2);
-}
-.Name.en{
-  font-size: calc(var(--Font-size) * 1.5);
-}
-.ar{
-  font-family: 'Regular';
-}
-.en{
-  font-family: 'Regular two';
-}
-.Header{
-  display: flex;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  height: 100vh;
+  & *{
+    color: var(--Color);
+    transition: all .2s ease;
+    text-decoration: none;
+    list-style: none;
+  }
 }
-.toDown{
-  #ToDown{
-    display: none;
+h1.Name{
+  background-image: linear-gradient( to right , #4633ff , #875adb);
+  background-clip: text;
+  color: transparent;
+  font-size: calc(var(--Font-size) * 2);
+  font-family:'Regular Two';
+}
+.Section{
+  width: 95%;
+  padding: 1% 2%;
+  border: 1px solid #040404;
+  margin-top: 5%;
+  border-radius: 5px;
+}
+.Nox{
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  & h2{
+    font-family: "Regular";
+    background-image: linear-gradient( to left bottom , #4633ff , #875adb);
+    background-clip: text;
+    color: transparent;
   }
-  .LabelForSliderDown{
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
-    font-weight: bolder;
-    transition: all .3s ease;
+  & h4{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    font-size: 11px;
+    translate: -50% -50%;
+    font-family: "Regular Three";
+  }
+}
+.Sections.Alpha{
+  display: grid;
+  font-size: 13px;
+  grid-template-columns: .75fr 2fr;
+  grid-template-rows: 1fr;
+  height: 65vh;
+  align-items: center;
+  & .LeftSlider{
+      h6{
+        font-size:10px;
+        font-family: "regular";
+      &:nth-child(5){
+        font-family: "regular two";
+      }
+      &:nth-child(4){
+        margin-bottom: -5%;
+      }
+      h1.Name{
+        margin: -5% 0%;
+      }
+      & .ButtonsSection{
+        display: flex;
+        gap: 5em;
+      }
+    }
+  }
+  & .RightSlider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img.Me{
+      position: absolute;
+      width: 200px;
+      right: 30%;
+      height: auto;
+    }
+    .BigCiricle{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      position: absolute;
+      right: 25%;
+      bottom: -20%;
+      z-index: -1;
+      background-image: linear-gradient( to top right , #4633ff , #875adb);
+    }
+  }
+  & .BottomSlider .SvgSLider{
     display: flex;
-    align-items: center ;
-    justify-content: center;
-    /* rotate: 90deg; */
-    border-radius: 50%;
-    background-color: var(--Special-Color);
+    gap: 1em;
+    align-items: center;
   }
-  #ToDown:checked ~ .LabelForSliderDown{
-    rotate: 180deg;
+}
+.TechCard{
+  width: 35px;
+  height: 35px;
+  position: relative;
+  & img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+}
+.Button{
+  padding: 5px 15px;
+  background-color: transparent;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0em 5%;
+  margin-left: -1%;
+  --First:#4633ff;
+  position: relative;
+  --Secound:#875adb;    
+  &::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    scale: 1;
+    border-radius: 5px;
+    translate: -50% -50%;
+    z-index: -1;
+    background-image: linear-gradient( to right , #4633ff , #875adb);
+  }
+  &:hover{
+    background-color: var(--First);
+  }
+  }
+  .Outline{
+    &:hover{
+    background-color: var(--Secound);
+  }
+}
+.NoxCode{
+  width: 225px;
+  height: 175px;
+  background-color: #222222;
+  border-radius: 10px;
+  padding: 0px 10px ;
+  font-family: monospace;
+  font-size: 11px;
+  & .top{
+    width: 100%;
+    height: 3em;
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -4.5%;
+    padding: 0px 10px ;
+    border-radius: 10px 10px 0px 0px;
+    & .Ciricle{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #19e107;
+    }
+  }
+  .CodeSpace{
+    padding-top: 10px;
+    .Codes{
+      padding-left: 10px;
+    }
+  }
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+  z-index: 999;
+}
+.Blink{
+  width: 1px;
+  height: 13px;
+  bottom: 14%;
+  left: 10%;
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  animation: Blink .5s linear infinite;
+}
+@keyframes Blink {
+  0%,100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
   }
 }
