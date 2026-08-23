@@ -1,17 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Skills from './Skills.json'
+import Nox from './Nox'
 
-function Alpha() {
-  function Nox(){
-    return(
-      <div className='Nox'>
-        <h2>نوكس</h2>
-        <h4>Nox</h4>
-      </div>
-    )
-  }
-
+function Alpha(){
   function TechCard(Nox){
     const Svg = `public/SVGs/${Nox.Name}.svg`
     return(
@@ -25,7 +17,7 @@ function Alpha() {
     age:17,
     experiance:"2 Years",
     skills:[
-      "React.js"," & Next.js"," & Three.js"
+      "'React.js',","'Next.js',","'Three.js'"
     ],
     position:"Building Things For THe Websites"
   }
@@ -41,7 +33,7 @@ function Alpha() {
           <div className="Codes">
             name : <span style={{color:"#de6d2a"}}>"{developer.name}"</span>,<br />
             experiance : <span style={{color:"#de6d2a"}}>"{developer.experiance}"</span>,<br />
-            skills : {"["}<span style={{color:"#de6d2a"}}>"{developer.skills}"</span> {"]"},<br />
+            skills : {"["}<span style={{color:"#de6d2a"}}>{developer.skills}</span> {"]"},<br />
             position : <span style={{color:"#de6d2a"}}>"{developer.position}"</span> ,<br />
           </div>
           {"}"};<div className="Blink"></div>
@@ -50,7 +42,7 @@ function Alpha() {
     )
   }
   return (
-    <div className='Sections Alpha'>
+    <div className='Sections Alpha' id="Home">
       <div className="LeftSlider">
         <Nox />
         <h1 className="Name">{developer.name}</h1>
@@ -59,7 +51,7 @@ function Alpha() {
         <h6>I'm Nox And I Can Do This All Day Just Let A Massage</h6>
         <div className="ButtonsSection">
           <Link className='Button'>Work Toghether</Link>
-          <a href="src\Pdfs\Mahmoud_Elnagar.pdf" target='_blank' className="Button Outline">Download The CV </a>
+          <a href="src\Pdfs\Mahmoud_Elnagar.pdf" target='_blank' download={true} className="Button Outline">Download The CV </a>
         </div>
       </div>
       <div className="RightSlider">

@@ -23,11 +23,15 @@ html{
   font-size: var(--Font-size);
   width: 100%;
   height: 100vh;
+  scroll-behavior: smooth;
   & *{
     color: var(--Color);
     transition: all .2s ease;
     text-decoration: none;
     list-style: none;
+  }
+  & ::-webkit-scrollbar{
+    display: none;
   }
 }
 h1.Name{
@@ -41,9 +45,10 @@ h1.Name{
   width: 95%;
   padding: 1% 2%;
   border: 1px solid #040404;
-  margin-top: 5%;
   border-radius: 5px;
 }
+
+/* Means Logo Styling */
 .Nox{
   position: relative;
   display: inline-block;
@@ -63,13 +68,22 @@ h1.Name{
     font-family: "Regular Three";
   }
 }
+
+/* All Sections in Home Page Styling */
+.Sections{
+  font-size: 13px;
+  width: 100%;
+  height: 65vh;
+  margin-top: 5%;
+  position: relative;
+}
+
+/* Alpha Section Of Styling */
 .Sections.Alpha{
   display: grid;
-  font-size: 13px;
+  align-items: center;
   grid-template-columns: .75fr 2fr;
   grid-template-rows: 1fr;
-  height: 65vh;
-  align-items: center;
   & .LeftSlider{
       h6{
         font-size:10px;
@@ -215,3 +229,125 @@ h1.Name{
     opacity: 1;
   }
 }
+
+/* Header Section Of Styling */
+.Header{
+  width: 90%;
+  padding: 1rem 2rem;
+  position: fixed;
+  left: 2.5%;
+  top: 2%;
+  background-color: #2f2f2f55;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  border-radius: 2rem;
+  & h1{
+    font-family: monospace;
+  }
+  & ul{
+    display: flex;
+    gap: 2.5em;
+    & li{
+      padding: .25rem 1rem;
+      border-bottom: 2px solid transparent;
+      &:hover{
+        border-bottom: 2px solid #875adb;
+      }
+    }
+  }
+  & .Button{
+    padding: 5px 25px;
+    font-weight: 900;
+    font-family: monospace;
+  }
+}
+
+/* Bravo Section Of Styling */
+.Sections.Bravo{
+  background-color: #222222;
+  padding: 2% 0%;
+  position: relative;
+  text-align: center;
+  & h1{
+    position: relative;
+    font-family:"Regular ";
+    display: inline-block;
+    &::before{
+      content: "";
+      width: 80px;
+      height: 2px;
+      position: absolute;
+      top: 130%;
+      left: 50%;
+      translate: -50% -50%;
+      background-image: radial-gradient( #875adb 50% , transparent 90%);
+    }
+  }
+  .Skills{
+    display: grid;
+    width: 90%;
+    padding: 2.5% 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em;
+    justify-items: center;
+  }
+}
+.SkillsCard{
+  width: 300px;
+  height: 75px;
+  border-radius: 7.5px;
+  background-color:#5c5b5b;
+  position: relative;
+  *{
+    transition: all .2s ease;
+  }
+  .Icon{
+    height: 85%;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    translate: -50% -50%;
+  }
+  .Bar {
+    height: 5px;
+    position: relative;
+    width: 180px;
+    background-color: #f7f5f5;
+    margin-left: 30%;
+    border-radius: 5px;
+    .ProgressNumber{
+      position: absolute;
+      right: -0%;
+      font-family: monospace;
+      top: -200%;
+      translate: -50% -50%;
+    }
+    .Progress{
+      height: 100%;
+      box-shadow: 2px 1px 5px 1px black;
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      translate: 0 -50%;
+      background-color: #4a48c7;
+    }
+  }
+} 
+.Topic{
+  color: #875adb;
+  font-family:monospace;
+  margin: 0 auto;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  translate: -50% -50%;
+}
+
+/* Section Charle Of Styling*/
