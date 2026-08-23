@@ -18,7 +18,7 @@ function Bravo() {
   return (
     <div className='Sections Bravo' id="Experiance">
       <h4 className='Topic'>My Skills</h4>
-      <h1>Technologies I Master</h1>
+      <h1 className='SpecialUnderName'>Technologies I Master</h1>
       <div className="Skills">
         {SkillIMaster.map((PO)=>(
           <Skill key={PO.id} Name={PO.Name} Progress={PO.Progress} />

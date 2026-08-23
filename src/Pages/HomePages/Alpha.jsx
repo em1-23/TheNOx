@@ -47,7 +47,7 @@ function Alpha(){
         <Nox />
         <h1 className="Name">{developer.name}</h1>
         <h4>{developer.skills} Developer</h4>
-        <h6>أنا نوكس واقدر اعمل دا كول اليوم سيب رسالة وخلاص</h6>
+        <h6>أنا نوكس واقدر اعمل دا طول اليوم سيب رسالة وخلاص</h6>
         <h6>I'm Nox And I Can Do This All Day Just Let A Massage</h6>
         <div className="ButtonsSection">
           <Link className='Button'>Work Toghether</Link>
