@@ -3,7 +3,8 @@ import { SkillIMaster } from './SkillIMaster'
 
 function Bravo() {
   function Skill(NoxS){
-    let SvgLink = `/SVGs/${NoxS.Name}.svg`
+    const SvgName = NoxS.Name === 'React' ? 'react' : NoxS.Name
+    let SvgLink = `/SVGS/${SvgName}.svg`
     return(
       <div className="SkillsCard">
         <img src={SvgLink} className='Icon' alt={NoxS.Name} />

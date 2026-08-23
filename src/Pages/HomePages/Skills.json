@@ -1,9 +1,9 @@
 [
-  {"id":1,"Name":"javascript"},
-  {"id":2,"Name":"css"},
-  {"id":3,"Name":"node"},
-  {"id":4,"Name":"git"},
-  {"id":5,"Name":"github"},
-  {"id":6,"Name":"vscode"},
+  {"id":1,"Name":"JavaScript"},
+  {"id":2,"Name":"Css"},
+  {"id":3,"Name":"Node"},
+  {"id":4,"Name":"Git"},
+  {"id":5,"Name":"Github"},
+  {"id":6,"Name":"VSCode"},
   {"id":7,"Name":"react"}
 ]
