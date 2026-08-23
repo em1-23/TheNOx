@@ -5,7 +5,7 @@ import Nox from './Nox'
 
 function Alpha(){
   function TechCard(Nox){
-    const Svg = `public/SVGs/${Nox.Name}.svg`
+    const Svg = `/SVGs/${Nox.Name}.svg`
     return(
       <div className="TechCard">
         <img src={Svg} alt={Nox.Name} className="SvgImage" />
