@@ -74,7 +74,8 @@ h1.Name{
   font-size: 13px;
   width: 100%;
   height: auto;
-  margin-top: 5%;
+  padding: 2% 0%;
+  margin-top: 8%;
   text-align: center;
   position: relative;
 }
@@ -85,6 +86,7 @@ h1.Name{
   align-items: center;
   grid-template-columns: .75fr 2fr;
   grid-template-rows: 1fr;
+  padding: 0% 0%;
   & .LeftSlider{
       h6{
         font-size:10px;
@@ -270,7 +272,6 @@ h1.Name{
 /* Bravo Section Of Styling */
 .Sections.Bravo{
   background-color: #222222;
-  padding: 2% 0%;
   position: relative;
   .Skills{
     display: grid;
@@ -324,7 +325,7 @@ h1.Name{
       background-color: #4a48c7;
     }
   }
-} 
+}
 .Topic{
   color: #875adb;
   font-family:monospace;
@@ -332,7 +333,7 @@ h1.Name{
   display: inline-block;
   position: absolute;
   left: 50%;
-  top: 3%;
+  top: 10%;
   translate: -50% -50%;
 }
 h1.SpecialUnderName{
@@ -355,4 +356,54 @@ h1.SpecialUnderName{
 /* Section Charle Of Styling*/
 .Sections.Charle{
   background-color: #222222;
+  .ProjectsSection{
+    width: 100%;
+    padding: 0% 2%;
+    justify-content: space-evenly;
+    display: flex;
+  }
+}
+
+/* Project Card Styling */
+.ProjectCard{
+  border: 1px solid #3c3b3b;
+  display: inline-block;
+  border-radius: 5px;
+  width: 400px;
+  height: 250px;
+  position: relative;
+  display: grid;
+  grid-template-columns: .5fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  grid-template-areas: 
+    "Image1 Image1"
+    "ImageType Description"
+  ;
+  img.Image{
+    border-radius: 5px 5px 0px 0px;
+    height: auto;
+    width: 100%;
+    grid-area: Image1;
+  }
+  .leftSlider{
+    margin-top: -3%;
+    line-height: 5px;
+    text-align:left;
+    grid-area: Description;
+    & .Link{
+      text-decoration:1px underline white;
+    }
+  }
+  
+  .TypeImage{
+    width: 50px;
+    height: 50px;
+    grid-area: ImageType;
+    margin-left: 5%;
+  }
+}
+.CenterAbsolute{
+  translate: -50% -50%;
+  position: absolute;
 }
