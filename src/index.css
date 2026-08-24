@@ -205,7 +205,7 @@ h1.Name{
     }
   }
   .CodeSpace{
-    padding-top: 10px;
+    padding-top: 17.5px;
     .Codes{
       padding-left: 10px;
     }
@@ -333,7 +333,7 @@ h1.Name{
   display: inline-block;
   position: absolute;
   left: 50%;
-  top: 10%;
+  top: 5%;
   translate: -50% -50%;
 }
 h1.SpecialUnderName{
@@ -343,7 +343,7 @@ h1.SpecialUnderName{
   margin: 3% 0%;
   &::before{
     content: "";
-    width: 80px;
+    width: 100px;
     height: 2px;
     position: absolute;
     top: 130%;
@@ -410,4 +410,9 @@ h1.SpecialUnderName{
 .CenterAbsolute{
   translate: -50% -50%;
   position: absolute;
+}
+
+/* Section Delta Styling */
+.Sections.Delta{
+  border-top: 1px solid #2b2b2b;
 }

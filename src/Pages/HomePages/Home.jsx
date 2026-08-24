@@ -3,6 +3,7 @@ import Header from './Header'
 import Alpha from './Alpha'
 import Bravo from './Bravo'
 import Charle from './Charle'
+import Delta from './Delta'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Alpha />
       <Bravo />
       <Charle />
+      <Delta />
     </div>
   )
 }
