@@ -13,7 +13,7 @@
 :root{
   --BackgroundColor:#1f1f1f;
   --Color:#f7f5f5;
-  --Special-Color: #1080e2;
+  --Special-Color: yellow;
   --Font-family:'Regular Three';
   --Font-size:12px;
 }
@@ -359,8 +359,10 @@ h1.SpecialUnderName{
   .ProjectsSection{
     width: 100%;
     padding: 0% 2%;
-    justify-content: space-evenly;
+    justify-content: center;
     display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
   }
 }
 
@@ -374,7 +376,7 @@ h1.SpecialUnderName{
   position: relative;
   display: grid;
   grid-template-columns: .5fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 175px 75px;
   gap: 1em;
   grid-template-areas: 
     "Image1 Image1"
@@ -382,8 +384,10 @@ h1.SpecialUnderName{
   ;
   img.Image{
     border-radius: 5px 5px 0px 0px;
-    height: auto;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    object-position: top;
     grid-area: Image1;
   }
   .leftSlider{
