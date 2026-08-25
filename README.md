@@ -33,6 +33,77 @@ Instead of having separate pages scattered across different platforms, NOX bring
 * 📄 Resume / CV
 
 ---
+### The Tree Of The Projects
+
+``` bath
+├── public
+|  ├── IMgs
+|  |  ├── IMG.png
+|  |  ├── ProjectsImage
+|  |  |  ├── ClashOfClans.png
+|  |  |  ├── Cookies.png
+|  |  |  ├── NOXGym.png
+|  |  |  ├── NoxProfile_Purpel.png
+|  |  |  ├── Profile_Yellow.png
+|  |  |  └── Types
+|  |  |     ├── Html.svg
+|  |  |     ├── MissingImage.svg
+|  |  |     ├── Next.svg
+|  |  |     └── React.svg
+|  |  ├── qrcode_github.com.png
+|  |  ├── sebastian-stan-5120x2880-22364.jpg
+|  |  └── the-odyssey-7680x4320-25035.jpg
+|  └── SVGS
+|     ├── Css.svg
+|     ├── Docker.svg
+|     ├── Express.svg
+|     ├── facebook-svgrepo-com.svg
+|     ├── Figma.svg
+|     ├── Git.svg
+|     ├── Github.svg
+|     ├── Gitlab.svg
+|     ├── google-logo-search-new-svgrepo-com.svg
+|     ├── HandCursor.svg
+|     ├── Html.svg
+|     ├── JavaScript.svg
+|     ├── linkedin-svgrepo-com.svg
+|     ├── Next.svg
+|     ├── Node.svg
+|     ├── NormalCursor.svg
+|     ├── react.svg
+|     ├── Sql.svg
+|     ├── TypeScript.svg
+|     ├── Vercel.svg
+|     ├── VSCode.svg
+|     └── whatsapp-svgrepo-com.svg
+├── README.md
+├── src
+|  ├── App.jsx
+|  ├── Fonts
+|  |  ├── Arsenica-Arabic-Extrabold-TRIAL.ttf
+|  |  ├── barada-reqa.ttf
+|  |  ├── Cairo-Black.ttf
+|  |  └── koftarabic-extralight.otf
+|  ├── index.css
+|  ├── main.jsx
+|  ├── Pages
+|  |  ├── HomePages
+|  |  |  ├── Alpha.jsx
+|  |  |  ├── Bravo.jsx
+|  |  |  ├── Charle.jsx
+|  |  |  ├── Delta.jsx
+|  |  |  ├── Header.jsx
+|  |  |  ├── Home.jsx
+|  |  |  ├── Nox.jsx
+|  |  |  ├── ProjectsIdo.js
+|  |  |  ├── SkillIMaster.js
+|  |  |  └── Skills.json
+|  |  └── Pages2
+|  └── Pdfs
+|     └── Mahmoud_Elnagar.pdf
+└── vite.config.js
+```
+---
 
 # 🎨 Design Philosophy
 
