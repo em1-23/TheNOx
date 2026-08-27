@@ -537,3 +537,67 @@ h1.SpecialUnderName{
     height: 275px;
   }
 }
+
+
+/* Fast Access Pages Styler */
+
+/* First Page Styler Called :: Learning Journey */
+.Section.LearningJourney{
+  text-align: center;
+}
+.Youtube{
+  --YouWidth:50px;
+  width: var(--YouWidth);
+  height: calc(var(--YouWidth)/2);
+  display: inline-block;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+  font-weight: 1000;
+  font-size: calc(var(--YouWidth)/4);
+  font-family: "Cairo";
+}
+.JourneyCard{
+  width: 500px;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  border:1.5px solid white;
+  .TimeOfYeaer{
+    --Widths:80px;
+    width: var(--Widths);
+    height: var(--Widths);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(var(--Widths)/4.5);
+    font-weight: 900;
+    font-family: "Cairo";
+    position: absolute;
+    translate: -50% -50%;
+    top: 50%;
+    left:15%;
+  }
+  .Youtube{
+    position: absolute;
+    translate: -50% -50%;
+    top: 65%;
+    left:31.5%;
+  }
+  .Name ,.TimeToTake{
+    position: absolute;
+    translate: -50% -50%;
+    top: 30%;
+    left:35%;  
+  }
+  .TimeToTake{
+    font-family:"Cairo";
+    top: 50%;
+    left:40%;
+    .Days{
+      color: #9e6bfc;
+    }  
+  }
+}
