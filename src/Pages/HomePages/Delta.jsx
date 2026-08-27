@@ -5,9 +5,12 @@ import { FastAccessIcons } from './FastAccessIcons'
 function Delta() {
   function Shortcut(NOx){
     const TheUrl = `/${NOx.Url}`
+    const shortcutStyle = {
+      '--shortcut-color': NOx.color,
+    }
     return(
       <Link to={TheUrl} >
-        <div className="Shortcut">
+        <div className="Shortcut" style={shortcutStyle}>
           <div className="Shortcut_Image_Styler">{NOx.Icon}</div>
           <h4 className='Shortcut_Name_Styler'>{NOx.NameOfIt}</h4>
         </div>
@@ -25,6 +28,7 @@ function Delta() {
             Icon={p.icon}
             NameOfIt={p.name} 
             Url={p.url}
+            color={p.color}
           />
         ))}
       </div>

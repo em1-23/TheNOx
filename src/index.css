@@ -10,6 +10,10 @@
   font-family: 'Regular three';
   src: url(Fonts/koftarabic-extralight.otf);
 }
+@font-face {
+  font-family: 'Cairo';
+  src: url(Fonts/Cairo-Regular-3.ttf);
+}
 :root{
   --BackgroundColor:#1f1f1f;
   --Color:#f7f5f5;
@@ -428,7 +432,9 @@ h1.SpecialUnderName{
   flex-wrap: wrap;
 }
 .Shortcut{
-  --Width-Shorcut:170px;
+  --Width-Shorcut:180px;
+  --shortcut-color:#1790e7;
+  /* --shortcut-gradient:linear-gradient(135deg, #174ea6, #1790e7); */
   height: calc(var(--Width-Shorcut)/1.5);
   width:var(--Width-Shorcut);
   border: 2px solid #2e3c78;
@@ -441,8 +447,9 @@ h1.SpecialUnderName{
   font-family: 'Cairo';
   position: relative;
   &:hover {
-    border: 2px solid #1790e7;
+    border: 2px solid var(--shortcut-color);
     translate: 0 -5px;
+    box-shadow: 0 12px 15px -16px var(--shortcut-color);
   }
   .Shortcut_Image_Styler{
     position: absolute;
@@ -471,6 +478,7 @@ h1.SpecialUnderName{
     scale: 1.05;
     transform: translateY(-5px);
     rotate: -4deg;
-    background-color: #1790e7;
+    background-color: var(--shortcut-color);
+    box-shadow: 0 0 16px -5px var(--shortcut-color);
   }
 }
