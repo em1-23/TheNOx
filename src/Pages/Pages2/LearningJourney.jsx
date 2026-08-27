@@ -1,28 +1,27 @@
 import React from 'react'
 
 function LearningJourney() {
-  function JourneyCard(Nox){
-    const Color = `green`
+  function JourneyPin(){
     return(
-      <div className="JourneyCard">
-        <div className="TimeOfYeaer" style={{backgroundColor:Color}}>2024</div>
-        <h2 className="Name">Html & Css</h2>
-        <span className="TimeToTake">Time Taken To Done <span className="Days"> 2 days</span></span>
-        <div className="MoreAboutTheJourney">
-          <div className="MyFirstWebsites"></div>
-          <a target='_blank' href="https://youtu.be/q3yFo-t1ykw" className="Youtube">▶</a>
+      <div className="JourneyPin">
+        <div className="Years">
+          2024
+        </div>
+        <div className="ThePlot">
+          <h2 className="TheObjectInTheYear">Html & Css</h2>
+          <div className="Done">Ended In 2 Days</div>
+          <a href="" className="YoutubeLink">Youtube</a>
+          <p className="Description">
+            I Started As A Html Dev From The Bottom
+          </p>
         </div>
       </div>
     )
   }
-  
   return (
     <div className='Section LearningJourney'>
-      <h1 className="Arabic">محمود احمد النجار</h1>
-      <h3 className="English">Mahmoud Ahmed Elnagar</h3>
-      <div className="TheJourney">
-        <JourneyCard />
-      </div>
+      <img src="/IMgs/J.png" alt="RoadMap" />
+      <JourneyPin />
     </div>
   )
 }
