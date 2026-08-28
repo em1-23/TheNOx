@@ -143,8 +143,8 @@ Developer • Builder • Creator
 I build websites, applications,
 AI systems and digital experiences.
 
-[ Explore My Work ]
-[ Contact Me ]
+<a href="https://github.com/em1-23">[ Explore My Work ]</a>
+<a href="https://wa.me/+201027680112">[ Contact Me ]</a>
 ```
 
 The homepage can also contain:
@@ -243,8 +243,8 @@ Tech Stack
 
 Status
 
-[ Live Demo ]
-[ GitHub ]
+<a href="https://the-n-ox.vercel.app/">[ Live Demo ]</a>
+<a href="https://github.com/em1-23">[ GitHub ]</a>
 [ Details ]
 ```
 
@@ -319,18 +319,18 @@ Example:
 ```text
 LANGUAGES
 
-Python      ██████████
-JavaScript  █████████
+Python      ███
+JavaScript  ████████
 HTML        ██████████
 CSS         ██████████
-SQL         ███████
+SQL         ████
 
 
 FRAMEWORKS
 
 React       █████████
-Next.js     ████████
-Django      ███████
+Next.js     ████
+Django      █
 Node.js     ████████
 ```
 
@@ -345,13 +345,13 @@ A timeline showing how my skills evolved.
 ```text
 Web Development
        ↓
-HTML / CSS
+HTML / CSS <<< 2024 
        ↓
-JavaScript
+JavaScript <<< 2024 
        ↓
-React
+React      <<< 2026 
        ↓
-Backend
+Backend    <<< 2026
        ↓
 Python
        ↓
@@ -582,11 +582,10 @@ could display:
 
 [01] NOX AI
 [02] Infinity Platform
-[03] Profilio
-[04] Boka Web
-[05] PUBG Elite
-[06] Delta Force
-[07] Betty Cookies
+[03] Profilio        
+[04] Boyka Web       << ReMake
+[05] Delta Force     << ReMake
+[06] Betty Cookies   << ReMake
 ```
 
 This gives the website a unique developer identity.
