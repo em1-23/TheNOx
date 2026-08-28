@@ -1,6 +1,6 @@
 import { BrowserRouter , Routes , Route } from 'react-router-dom'
 import Home from './Pages/HomePages/Home'
-
+import Header from './Pages/HomePages/Header'
 // Fast Access Pages
 import LearningJourney from './Pages/Pages2/LearningJourney'
 import Tools from './Pages/Pages2/Tools'

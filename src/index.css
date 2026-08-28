@@ -38,6 +38,22 @@ html{
     display: none;
   }
 }
+@keyframes SlideUpDown {
+  0% , 100%{
+    transform: translateY(10px);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+}
+@keyframes SlideUpDownMore {
+  0% , 100%{
+    transform: translateY(2.5px);
+  }
+  50%{
+    transform: translateY(-2.5px);
+  }
+}
 h1.Name{
   background-image: linear-gradient( to right , #fff , #2b7171);
   background-clip: text;
@@ -48,7 +64,6 @@ h1.Name{
 .Section{
   width: 95%;
   padding: 1% 2%;
-  border: 1px solid #040404;
   border-radius: 5px;
 }
 
@@ -57,6 +72,7 @@ h1.Name{
   position: relative;
   display: inline-block;
   font-size: 20px;
+  animation: SlideUpDown 5s linear infinite;
   & h2{
     font-family: "Regular";
     background-image: linear-gradient( to left bottom , #bf2956, #2b5471);
@@ -117,6 +133,7 @@ h1.Name{
     img.Me{
       position: absolute;
       width: 200px;
+      animation: SlideUpDown 10s linear infinite;
       right: 30%;
       height: auto;
     }
@@ -128,6 +145,7 @@ h1.Name{
       right: 25%;
       bottom: -20%;
       z-index: -1;
+      animation: SlideUpDown 7.5s linear infinite;
       background-image: linear-gradient( to top right , #bf2956 , #2b7171);
     }
   }
@@ -159,7 +177,8 @@ h1.Name{
   margin-left: -1%;
   --First:#bf2956;
   position: relative;
-  --Secound:#2b7fa3;    
+  --Secound:#2b7fa3;
+  border: none;
   &::after{
     content: "";
     width: 100%;
@@ -176,15 +195,16 @@ h1.Name{
   &:hover{
     background-color: var(--First);
   }
-  }
-  .Outline{
-    &:hover{
+}
+.Outline{
+  &:hover{
     background-color: var(--Secound);
   }
 }
 .NoxCode{
   width: 225px;
   height: 175px;
+  animation: SlideUpDown 5s linear infinite;
   background-color: #222222;
   border-radius: 10px;
   padding: 0px 10px ;
@@ -292,6 +312,7 @@ h1.Name{
   height: 75px;
   border-radius: 7.5px;
   background-color:#5c5b5b;
+  animation: SlideUpDownMore 5s ease infinite;
   position: relative;
   *{
     transition: all .2s ease;
@@ -379,6 +400,7 @@ h1.SpecialUnderName{
   height: 250px;
   position: relative;
   display: grid;
+  animation: SlideUpDown 15s linear infinite;
   grid-template-columns: .5fr 2fr;
   grid-template-rows: 175px 75px;
   gap: 1em;
@@ -554,7 +576,7 @@ h1.SpecialUnderName{
   border-radius: 50%;
   width: var(--WidthOfThePin);
   height: var(--WidthOfThePin);
-  background-color: #2b5471;
+  background-color: #1e7dc1;
   position: relative;
   .Years{
     position: absolute;
@@ -571,15 +593,27 @@ h1.SpecialUnderName{
     left: 200%;
     translate: -50% -50%;
     width: calc(var(--WidthOfThePin)*2);
-    height: calc(var(--WidthOfThePin)*2);
+    height: calc(var(--WidthOfThePin)*2.5);
     border-radius: 7.5px;
-    background-color: #1790e7;
+    background-color: #1e7dc1;
     opacity: 0;
     translate: -55% -50%;
-    
+    .YoutubeLink{
+      background-color: red;
+      border-radius: 5px;
+      padding: 2px 10px;
+      font-family: "Cairo";
+      display: inline-block;
+      margin: 5% 0%;
+      border: 2px solid red;
+      &:hover{
+        background-color: transparent;
+      }
+    }
   }
   &:hover .ThePlot{
     opacity: 1;
-    translate: -50% -50%;
+    translate: -45% -50%;
   }
+  position: absolute;
 }
