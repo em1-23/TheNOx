@@ -563,57 +563,107 @@ h1.SpecialUnderName{
 
 /* Fast Access Pages Styler */
 
-/* First Page Styler Called :: Learning Journey */
-.Section.LearningJourney{
+/* First Page Styler Called :: Tools */
+
+.TechnologiesandTools{
   text-align: center;
-  img{
-    width:auto;
-    height:75vh;
-  }
-}
-.JourneyPin{
-  --WidthOfThePin:75px;
-  border-radius: 50%;
-  width: var(--WidthOfThePin);
-  height: var(--WidthOfThePin);
-  background-color: #1e7dc1;
-  position: relative;
-  .Years{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    font-weight: 900;
-    font-family:"Cairo";
-    font-size: calc(var(--WidthOfThePin)/4.5);
-  }
-  .ThePlot{
-    position: absolute;
-    top: 50%;
-    left: 200%;
-    translate: -50% -50%;
-    width: calc(var(--WidthOfThePin)*2);
-    height: calc(var(--WidthOfThePin)*2.5);
-    border-radius: 7.5px;
-    background-color: #1e7dc1;
-    opacity: 0;
-    translate: -55% -50%;
-    .YoutubeLink{
-      background-color: red;
+  .ToolsSection{
+    padding: 1% 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    flex-wrap: wrap;
+    .ToolCard{
+      --ToolWidth:100px;
+      width: var(--ToolWidth);
+      height: var(--ToolWidth);
+      background-color: #f7f7f711;
+      position: relative;
+      backdrop-filter: blur(10px);
+      z-index: 50;
       border-radius: 5px;
-      padding: 2px 10px;
-      font-family: "Cairo";
-      display: inline-block;
-      margin: 5% 0%;
-      border: 2px solid red;
-      &:hover{
-        background-color: transparent;
+      img.Image{
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+      .Description{
+        width: calc(var(--ToolWidth) * 1.15);
+        height: calc(var(--ToolWidth) * .9);
+        padding: 1em;
+        border-bottom: 1px solid white;
+        background-color: #00000072;
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        opacity: 0;
+        text-align: center;
+        font-family: "Cairo";
+        line-height: 15px;
+        backdrop-filter: blur(25px);
+        & *{
+          color: #fff;
+        }
+      }
+      &:hover .Description{
+        opacity: 1;
       }
     }
   }
-  &:hover .ThePlot{
-    opacity: 1;
-    translate: -45% -50%;
-  }
+}
+
+
+.button_border {
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+.button_border span {
+  transition: all 0.3s;
+}
+.button_border::before {
+  content: '';
   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.button_border:hover span {
+  letter-spacing: 2px;
+}
+.button_border:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.button_border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.button_border:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
 }
