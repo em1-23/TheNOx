@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tooles } from './Tools.js'
+import { Tooles } from './ToolsData'
 
 function Tools() {
   function ToolCard(NOx){
