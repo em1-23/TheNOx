@@ -259,6 +259,9 @@ h1.Name{
 }
 
 /* Header Section Of Styling */
+h1.Header{
+  font-family: monospace;
+}
 .Header{
   width: 90%;
   padding: 1rem 2rem;
@@ -272,9 +275,6 @@ h1.Name{
   z-index: 1000;
   backdrop-filter: blur(15px);
   border-radius: 2rem;
-  & h1{
-    font-family: monospace;
-  }
   & ul{
     display: flex;
     gap: 2.5em;
@@ -666,4 +666,22 @@ h1.SpecialUnderName{
 .button_border:hover::after {
   opacity: 0; 
   transform: scale(0.1, 1);
+}
+
+/* Secound Page Fast Access : Experiments */
+.Experiments{
+  .Header{
+    position: relative;
+    margin-bottom: 5em;
+    .Time{
+      font-family: "Cairo";
+    }
+  }
+}
+.YoutubeLink{
+  padding: 2.5px 10px;
+  background-color: red;
+  border-radius: 5px;
+  margin: 1em 0%;
+  display: inline-block;
 }

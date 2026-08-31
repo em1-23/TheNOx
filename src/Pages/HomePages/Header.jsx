@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <div className='Header'>
-      <h1>{"</>"} NoxCode</h1>
+      <h1 className="LogoName">{"</>"} NoxCode</h1>
       <ul>
         <li><a href="#Home">Home</a></li>
         <li><a href="#Experiance">Experiance</a></li>
