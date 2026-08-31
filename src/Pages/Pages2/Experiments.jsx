@@ -17,7 +17,7 @@ function Experiments() {
     else{
       AllTime = `${AllTime} Year`
     }
-    let Links = `/public/SVGS/${Nox.Linkss}.svg`
+    let Links = `/SVGS/${Nox.Linkss}.svg`
     return(
       <div className="ExpTemplate">
         <img src={Links} alt={Nox.Name} />
