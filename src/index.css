@@ -731,7 +731,7 @@ h1.SpecialUnderName{
 }
 .TemplateSection{
   display: flex;
-  width: 85%;
+  width: 90%;
   flex-wrap: wrap;
   gap: 3em;
   margin: 1% auto;
