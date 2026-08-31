@@ -729,3 +729,25 @@ h1.SpecialUnderName{
     margin: 2% 0%;
   }
 }
+.TemplateSection{
+  display: flex;
+  width: 90%;
+  padding: 0% 4.5%;
+  margin: 1% 0%;
+  justify-content: center;
+}
+.RepoTemplate{
+  width: 600px;
+  height: 400px;
+  background-color: #1e253a;
+  border: 2px solid #2e395a;
+  border-radius: 10px;
+  & img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    height: 70%;
+  }
+  & .ProjectName{
+    font-family: "Regular Three";
+  }
+}

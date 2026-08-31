@@ -26,10 +26,22 @@ function Experiments() {
       </div>
     )
   }
-  function RepTemplate(){
+  function RepTemplate(NOx){
+    let ProjectImageLink = `/IMgs/ProjectsImage/${NOx.Image}.png`
+    let Style = {}
+
+    if (NOx.Image === "" || NOx.Image === null || NOx.Image === undefined){
+      ProjectImageLink = `/IMgs/ProjectsImage/MissingProjectsImage.jpg`
+      Style = { objectFit: 'cover', objectPosition: 'center' }
+    } else {
+      ProjectImageLink = `/IMgs/ProjectsImage/${NOx.Image}.png`
+      Style = { objectFit: 'cover', objectPosition: 'center' }
+    }
+
     return(
       <div className="RepoTemplate">
-        <div className="Name"></div>
+        <img src={ProjectImageLink} alt={NOx.Name} style={Style} />
+        <h1 className="ProjectName">{NOx.Name}</h1>
       </div>
     )
   }
@@ -48,7 +60,7 @@ function Experiments() {
       </div>
       <h1 className='Name'>Projects</h1>
       <div className="TemplateSection">
-
+        <RepTemplate Name="Project Test 1" />
       </div>
     </div>
   )
