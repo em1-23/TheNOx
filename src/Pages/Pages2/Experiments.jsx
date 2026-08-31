@@ -1,12 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Exp } from './data for Exp/exp'
+import { Projects } from './data for Exp/projects'
 
 function Experiments() {
   let Time = new Date()
   let NewYear = Time.getFullYear()
   let NewDay = Time.getDate()
   let NewMonth = Time.getMonth() + 1
+
+  function resolveProjectImage(imageName) {
+    if (!imageName || imageName === '' || imageName === null || imageName === undefined) {
+      return {
+        src: '/IMgs/ProjectsImage/MissingProjectsImage.jpg',
+        style: { objectFit: 'cover', objectPosition: 'top' }
+      }
+    }
+
+    return {
+      src: `/IMgs/ProjectsImage/${imageName}.png`,
+      style: { objectFit: 'cover', objectPosition: 'center' }
+    }
+  }
 
   function ExpTemplate(Nox){
     let FirstTime = Nox.Time
@@ -27,21 +42,33 @@ function Experiments() {
     )
   }
   function RepTemplate(NOx){
-    let ProjectImageLink = `/IMgs/ProjectsImage/${NOx.Image}.png`
-    let Style = {}
+    const projectImage = resolveProjectImage(NOx.Image)
+    let ToolImage1 = `/SVGS/${NOx.Tool1}.svg`
+    let ToolImage2 = `/SVGS/${NOx.Tool2}.svg`
+    let ToolImage3 = `/SVGS/${NOx.Tool3}.svg`
+    let RepoNameGithub = `https://github.com/em1-23/${NOx.RepoNameGithub}`
 
-    if (NOx.Image === "" || NOx.Image === null || NOx.Image === undefined){
-      ProjectImageLink = `/IMgs/ProjectsImage/MissingProjectsImage.jpg`
-      Style = { objectFit: 'cover', objectPosition: 'center' }
-    } else {
-      ProjectImageLink = `/IMgs/ProjectsImage/${NOx.Image}.png`
-      Style = { objectFit: 'cover', objectPosition: 'center' }
+    const handleProjectImageError = (event) => {
+      event.target.src = '/IMgs/ProjectsImage/MissingProjectsImage.jpg'
+      event.target.style.objectFit = 'cover'
+      event.target.style.objectPosition = 'top'
     }
 
     return(
       <div className="RepoTemplate">
-        <img src={ProjectImageLink} alt={NOx.Name} style={Style} />
+        <img
+          src={projectImage.src}
+          alt={NOx.Name}
+          style={projectImage.style}
+          onError={handleProjectImageError}
+        />
         <h1 className="ProjectName">{NOx.Name}</h1>
+        <div className="ProjectsTools">
+          <img src={ToolImage1} alt={NOx.Tool1} className="Tool" />
+          <img src={ToolImage2} alt={NOx.Tool2} className="Tool" />
+          <img src={ToolImage3} alt={NOx.Tool3} className="Tool" />
+        </div>
+        <a href={RepoNameGithub} target='_blank' className="GithubLink">{"</>"}</a>
       </div>
     )
   }
@@ -60,7 +87,9 @@ function Experiments() {
       </div>
       <h1 className='Name'>Projects</h1>
       <div className="TemplateSection">
-        <RepTemplate Name="Project Test 1" />
+        {Projects.map((e)=>(
+          <RepTemplate Name={e.Name} RepoNameGithub={e.RepoNameGithub} Tool1={e.Tool1} Tool2={e.Tool2} Image={e.Image} Tool3={e.Tool3} key={e.id} />
+        ))}
       </div>
     </div>
   )

@@ -731,16 +731,18 @@ h1.SpecialUnderName{
 }
 .TemplateSection{
   display: flex;
-  width: 90%;
-  padding: 0% 4.5%;
-  margin: 1% 0%;
-  justify-content: center;
+  width: 85%;
+  flex-wrap: wrap;
+  gap: 3em;
+  margin: 1% auto;
+  justify-content: space-between;
 }
 .RepoTemplate{
   width: 600px;
   height: 400px;
   background-color: #1e253a;
   border: 2px solid #2e395a;
+  position: relative;
   border-radius: 10px;
   & img{
     width: 100%;
@@ -748,6 +750,59 @@ h1.SpecialUnderName{
     height: 70%;
   }
   & .ProjectName{
+    margin-left: 2em;
     font-family: "Regular Three";
+  }
+  .ProjectsTools{
+    display: flex;
+    gap: .5em;
+    margin-top: -1%;
+    margin-left: 4em;
+    & img{
+      width: 40px;
+      height: 40px;
+    }
+  }
+  & .GithubLink{
+    position: absolute;
+    display: inline-block;
+    font-size: 15px;
+    font-family:  "Regular Two" , monospace , sans-serif;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2b5471;
+    background-color: #3540624b;
+    border-radius: 50%;
+    position: absolute;
+    translate: -50% -50%;
+    top: 0%;
+    left: 100%;
+    z-index: 999;
+    &:hover{
+      padding-right: 125px;
+      border-radius: 5px;
+      left: calc(100% + 50px);
+    }
+    &::after{
+      content: "Show In Github";
+      font-family: monospace;
+      position: absolute;
+      width: 200%;
+      right: -250%;
+      top: 50%;
+      visibility: hidden;
+      translate: -50% -50%;
+      transition: all .1s ease-out;
+    }
+    &:hover::after{
+      right: -225%;
+      visibility: visible;
+    }
+    &:active{
+      background-color: #2b5471;
+    }
   }
 }
