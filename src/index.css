@@ -669,7 +669,7 @@ h1.SpecialUnderName{
 }
 
 /* Secound Page Fast Access : Experiments */
-.Experiments{
+.Section.H{
   .Header{
     position: relative;
     margin-bottom: 5em;
@@ -677,6 +677,9 @@ h1.SpecialUnderName{
       font-family: "Cairo";
     }
   }
+}
+
+.Experiments{
   .ExpTemplate{
     width: 400px;
     background-color: #1e253a;
@@ -784,7 +787,7 @@ h1.SpecialUnderName{
     &:hover{
       padding-right: 125px;
       border-radius: 5px;
-      left: calc(100% + 50px);
+      left: calc(100% + 65px);
     }
     &::after{
       content: "Show In Github";
@@ -806,3 +809,27 @@ h1.SpecialUnderName{
     }
   }
 }
+
+/* Third Fast Access Page : Goals */
+.Section.Goals{
+  & .TheTerms{
+    width: 90%;
+    margin: 2% auto;
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+    & .TermStyle{
+      width: 300px;
+      background-color: #2b54713c;
+      padding: 0% 3% 3% 2%;
+      border-radius: 0px 10px 10px 0px;
+      border-left: 5px solid #690080;
+      font-size: 15px;
+      & *{
+        font-family: "Cairo";
+      }
+    }
+  }
+}
+
+/* Four Fast Access Page : Currently Learning */

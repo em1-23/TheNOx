@@ -73,7 +73,7 @@ function Experiments() {
     )
   }
   return (
-    <div className='Section Experiments'>
+    <div className='Section Experiments H'>
       <div className="Header">
         <h3 className="Name">Experiments And Projects</h3>
         <div className="Time">Date : {NewDay} / {NewMonth} / {NewYear}</div>
