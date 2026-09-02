@@ -17,7 +17,6 @@
 :root{
   --BackgroundColor:#1f1f1f;
   --Color:#f7f5f5;
-  --Special-Color: yellow;
   --Font-family:'Regular Three';
   --Font-size:12px;
 }
@@ -832,4 +831,177 @@ h1.SpecialUnderName{
   }
 }
 
-/* Four Fast Access Page : Currently Learning */
+/* Four Fast Access Page : Website Create */
+
+.Section.WebsiteCreate{
+  --Dark-Special-ColorStyler:#2c62a4;
+  --Light-Special-Color:#0c3572;
+  .FormStyler{
+    width: 70%;
+    height: 70vh;
+    margin: 1.5% auto;
+    border-radius: 15px;
+    background-color: #063249;
+    border: 1px solid #1f1f1f;
+    box-shadow: inset 1px 1px 10px 1px #272727;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    .Slider{
+      /* border: 1px solid white; */
+      border-radius: 15px;
+      position: relative;
+    }
+    .Ciricle{
+      width: 175px;
+      height: 175px;
+      background-image: linear-gradient(to bottom right , #3781c3, #00528c );
+      box-shadow: 1px 1px 10px 1px #272727;
+      border-radius: 0px 100% 0% 15px;
+      position: absolute;
+      bottom: -5px;
+      left: -5px;
+      z-index: 999;
+    }
+    .Left_Slider_Photo{
+      img{
+        width: 150px;
+        position: absolute;
+        translate: -50% -50%;
+        top: 40%;
+        left: 60.5%;
+      }
+      .Ciricle.Center{
+        bottom: -10%;
+        left: 65%;
+        translate: -50% -50%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 35px;
+        font-family: "Regular Two";
+        justify-content: center;
+      }
+      .Ciricle_Blah{
+        box-shadow: 1px 1px 10px 1px #272727;
+        width: 415px;
+        height: 465px;
+        background-color:#2b5471;
+        border-radius: 15px 40% 60% 0%;
+        text-align: left;
+        padding-left: 50px;
+        position: absolute;
+        font-family: "cairo";
+        top: -5px;
+        z-index: 0;
+        left: -5px;
+        h1{
+          margin-bottom: -25px;
+        }
+      }
+    }
+    .Right_Slider_Form{
+      .Ciricle.BottomRight{
+        bottom: -5px;
+        border-radius: 100% 0% 15px 0% ;
+        left: calc(100% - 170px);
+      }
+      form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr 50px;
+        gap: 1em;
+        margin: 5% 0%;
+        grid-template-areas:
+        "Right Left"
+        "Button Button";
+        .Right{
+          grid-area:Right;
+        }
+        .Left{
+          grid-area:Left;
+        }
+        .SentButton{
+          grid-area:Button;
+          padding: 5px 20px;
+          width: 92.5%;
+          height: 35px;
+          border-radius: 5px;
+          background-color: transparent;
+          font-family:"Cairo";
+          border: 2px solid #00528c;
+          &:hover{
+            background-color: #00528c;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wave-group {
+  margin: 3.5% 0%;
+  position: relative;
+  font-size: 10px;
+  & *{
+    font-family:'Cairo';
+  }
+}
+.wave-group .input {
+  font-size: 10px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+.wave-group .input:focus {
+  outline: none;
+}
+.wave-group .label {
+  color: #999;
+  font-size: 12px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * .05s);
+}
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #5264AE;
+}
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 215px;
+}
+.wave-group .bar:before,.wave-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.wave-group .bar:before {
+  left: 50%;
+}
+.wave-group .bar:after {
+  right: 50%;
+}
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
