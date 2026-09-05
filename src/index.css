@@ -810,24 +810,63 @@ h1.SpecialUnderName{
 }
 
 /* Third Fast Access Page : Goals */
-.Section.Goals{
-  & .TheTerms{
-    width: 90%;
-    margin: 2% auto;
-    display: flex;
-    align-items: top;
-    justify-content: space-around;
-    & .TermStyle{
-      width: 300px;
-      background-color: #2b54713c;
-      padding: 0% 3% 3% 2%;
-      border-radius: 0px 10px 10px 0px;
-      border-left: 5px solid #690080;
-      font-size: 15px;
-      & *{
-        font-family: "Cairo";
-      }
+.TheTerms{
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  gap: 10em;
+  align-items: center;
+}
+.TermStyleFlipMe{
+  --ColorOfTheBackground:#690080;
+  width: 300px;
+  height: 400px;
+  perspective: 400px;
+  position: relative;
+  .Front,.Back{
+    width: 100%;
+    padding: 0% 3% 0% 2%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: var(--BackgroundColor);
+    background-color: #162c3b;
+    border-left: 5px solid var(--ColorOfTheBackground);
+    transform-style: preserve-3d;
+    transition: all .6s ease;
+  }
+  .Front{
+    --MainRotate:0deg;
+    h1{
+      position: absolute;
+      translate: 0% -50%;
+      left: 0%;
+      top: 45%;
+      display: inline-block;
+      width: 100%;
+      text-align: right;
+      font-family:"Cairo";
+      font-size: 60px;
+      rotate: -90deg;
     }
+  }
+  .Back{
+    --MainRotate:180deg;
+    transform: rotateY(180deg);
+    z-index: 1;
+    .ListStyle{
+      font-size: 15px;
+      margin: 2% 2%;
+      font-family:"Cairo";
+    }
+  }
+  &:hover .Front ,&:hover .Back{
+    transform: rotateY(calc(var(--MainRotate) + 180deg));
+    z-index: 1;
+  }
+  &:hover .Back{
+    z-index: 2;
   }
 }
 
