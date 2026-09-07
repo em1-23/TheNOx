@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 
 function Websitecreate() {
   const [imagePreview, setImagePreview] = useState(null)
+  const [imagePreview2, setImagePreview2] = useState(null)
   const [fileObject, setFileObject] = useState(null)
+  const [fileObject2, setFileObject2] = useState(null)
   const handleImageChange = (e) => {
     const file = e.target.files[0]
     if (file) {
@@ -12,9 +14,16 @@ function Websitecreate() {
       setImagePreview(URL.createObjectURL(file))
     }
   }
+  const handleImageChange2 = (e) => {
+    const file = e.target.files[0]
+    if (file) {
+      setFileObject2(file)
+      setImagePreview2(URL.createObjectURL(file))
+    }
+  }
   const handleSubmit = (es) => {
     es.preventDefault()
-    console.log("تم إرسال البيانات والملف:", fileObject)
+    console.log("تم إرسال البيانات والملف:", fileObject , fileObject2)
   }
   return (
     <div className='Section WebsiteCreate H'>
@@ -51,7 +60,7 @@ function Websitecreate() {
                 {imagePreview ? (
                   <img 
                     src={imagePreview} 
-                    alt="Preview" 
+                    alt="Logo" 
                     className="UploadedPreviewImage"
                   />
                 ) : (
@@ -65,6 +74,24 @@ function Websitecreate() {
               <input type="tel" className='InputBox' placeholder='Enter Your Number' />
               <input type="email" className='InputBox' placeholder='Enter Your Email' />
               <textarea className='InputBox TextArea' placeholder='Enter A Link Website Like You Want'></textarea>
+                <input 
+                type="file" 
+                id="FileSvg2" 
+                accept="image/*"
+                onChange={handleImageChange2} 
+                hidden 
+              />
+              <label htmlFor="FileSvg2" className='InputBox Label'>
+                {imagePreview2 ? (
+                  <img 
+                    src={imagePreview2} 
+                    alt="Ui Design" 
+                    className="UploadedPreviewImage"
+                  />
+                ) : (
+                  "Upload Your Ui Design If You Have"
+                )}
+              </label>
             </div>
           </form>
           <div className="Ciricle BottomRight"></div>
