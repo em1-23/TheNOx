@@ -6,6 +6,7 @@ import Tools from './Pages/Pages2/Tools'
 import Experiments from './Pages/Pages2/Experiments'
 import Goals from './Pages/Pages2/Goals'
 import Websitecreate from './Pages/Pages2/Websitecreate'
+import Social from './Pages/Pages2/social' 
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/experiments" element={<Experiments />}></Route>
         <Route path="/goals" element={<Goals />}></Route>
         <Route path="/websitecr" element={<Websitecreate />}></Route>
+        <Route path="/social" element={<Social />}></Route>
       </Routes>
     </BrowserRouter>
   )

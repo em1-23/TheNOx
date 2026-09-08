@@ -1125,3 +1125,43 @@ h1.SpecialUnderName{
     }
   }
 }
+.Profiles{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    width: 82.5%;
+    height: 82.5%;
+  }
+  border: 1px solid #242424;
+  border-radius: 50%;
+  &:has(img:hover){
+    border: 1px solid #3a3a3a;
+  } 
+}
+.SocialIcon{
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #3a3a3a;
+  border-radius: 50%;
+  padding: 1px;
+  translate: -50% -50%;
+  top: calc(var(--Top) * 1%);
+  right: calc(var(--Right) * 1%);
+  position: absolute;
+  img{
+    width: 90%;
+    height: 90%;
+  }
+  &:hover{
+    scale: .9;
+  }
+}
