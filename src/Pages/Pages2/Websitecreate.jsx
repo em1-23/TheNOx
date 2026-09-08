@@ -1,29 +1,36 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { Link } from 'react-router-dom'
 
 function Websitecreate() {
-  const [imagePreview, setImagePreview] = useState(null)
-  const [imagePreview2, setImagePreview2] = useState(null)
-  const [fileObject, setFileObject] = useState(null)
-  const [fileObject2, setFileObject2] = useState(null)
-  const handleImageChange = (e) => {
-    const file = e.target.files[0]
-    if (file) {
-      setFileObject(file)
-      setImagePreview(URL.createObjectURL(file))
+  const formRef = useRef(null)
+  const [isSending, setIsSending] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState(null)
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setSubmitMessage(null)
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+    if (!serviceId || !templateId || !publicKey) {
+      setSubmitMessage({ type: 'error', text: 'Email service is not configured yet.' })
+      return
     }
-  }
-  const handleImageChange2 = (e) => {
-    const file = e.target.files[0]
-    if (file) {
-      setFileObject2(file)
-      setImagePreview2(URL.createObjectURL(file))
+
+    setIsSending(true)
+    try {
+      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
+      formRef.current.reset()
+      setSubmitMessage({ type: 'success', text: 'Your request was sent successfully.' })
+    } catch (error) {
+      console.error('EmailJS submission failed:', error)
+      const errorDetails = error?.text || error?.message || 'Please check your EmailJS service and template settings.'
+      setSubmitMessage({ type: 'error', text: `Unable to send your request: ${errorDetails}` })
+    } finally {
+      setIsSending(false)
     }
-  }
-  const handleSubmit = (es) => {
-    es.preventDefault()
-    console.log("تم إرسال البيانات والملف:", fileObject , fileObject2)
   }
   return (
     <div className='Section WebsiteCreate H'>
@@ -44,56 +51,29 @@ function Websitecreate() {
         <div className="Slider Right_Slider_Form">
           <h1>Enter Your Information To Contact With You</h1>
           
-          <form onSubmit={handleSubmit}>
+          <form ref={formRef} onSubmit={handleSubmit} encType="multipart/form-data">
+            <input type="hidden" name="to_email" value="melngar650@gmail.com" />
             <div className="Right">
-              <input type="text" className='InputBox' placeholder='Enter Your Name' />
-              <input type="text" className='InputBox' placeholder='Enter Your Countery' />
-              <textarea className='InputBox TextArea' placeholder='Enter Your Description'></textarea>
-              <input 
-                type="file" 
-                id="FileSvg" 
-                accept="image/*"
-                onChange={handleImageChange} 
-                hidden 
-              />
-              <label htmlFor="FileSvg" className='InputBox Label'>
-                {imagePreview ? (
-                  <img 
-                    src={imagePreview} 
-                    alt="Logo" 
-                    className="UploadedPreviewImage"
-                  />
-                ) : (
-                  "Upload Your Logo"
-                )}
-              </label>
-              <button className='InputBox SentButton' type='submit'>Send It</button>
+              <input type="text" name="user_name" className='InputBox' placeholder='Enter Your Name' required />
+              <input type="text" name="country" className='InputBox' placeholder='Enter Your Country' required />
+              <textarea name="description" className='InputBox TextArea' placeholder='Enter Your Description' required></textarea>
+              
+              <button className='InputBox SentButton' type='submit' disabled={isSending}>
+                {isSending ? 'Sending...' : 'Send It'}
+              </button>
             </div>
             
             <div className="Left">
-              <input type="tel" className='InputBox' placeholder='Enter Your Number' />
-              <input type="email" className='InputBox' placeholder='Enter Your Email' />
-              <textarea className='InputBox TextArea' placeholder='Enter A Link Website Like You Want'></textarea>
-                <input 
-                type="file" 
-                id="FileSvg2" 
-                accept="image/*"
-                onChange={handleImageChange2} 
-                hidden 
-              />
-              <label htmlFor="FileSvg2" className='InputBox Label'>
-                {imagePreview2 ? (
-                  <img 
-                    src={imagePreview2} 
-                    alt="Ui Design" 
-                    className="UploadedPreviewImage"
-                  />
-                ) : (
-                  "Upload Your Ui Design If You Have"
-                )}
-              </label>
+              <input type="tel" name="phone" className='InputBox' placeholder='Enter Your Number' required />
+              <input type="email" name="user_email" className='InputBox' placeholder='Enter Your Email' required />
+              <textarea name="reference_link" className='InputBox TextArea' placeholder='Enter A Link Website Like You Want'></textarea>
             </div>
           </form>
+          {submitMessage && (
+            <p className={`SubmitMessage ${submitMessage.type}`} role="status">
+              {submitMessage.text}
+            </p>
+          )}
           <div className="Ciricle BottomRight"></div>
         </div>
       </div>

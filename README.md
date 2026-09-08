@@ -18,24 +18,25 @@ Instead of having separate pages scattered across different platforms, NOX bring
 
 ### Inside NOX
 
-* 👤 About Me
-* 💻 Programming Skills
-* 🚀 Projects
-* 🧠 Learning Journey
-* 🛠️ Technologies & Tools
-* 🧪 Experiments
-* 🎯 Goals & Future Plans
-* 📚 Currently Learning
-* 🏆 Achievements
-* 📂 Projects Showcase
-* 📞 Contact
-* 🔗 Social Links
-* 📄 Resume / CV
+- 👤 About Me
+- 💻 Programming Skills
+- 🚀 Projects
+- 🧠 Learning Journey
+- 🛠️ Technologies & Tools
+- 🧪 Experiments
+- 🎯 Goals & Future Plans
+- 📚 Currently Learning
+- 🏆 Achievements
+- 📂 Projects Showcase
+- 📞 Contact
+- 🔗 Social Links
+- 📄 Resume / CV
 
 ---
+
 ### The Tree Of The Projects
 
-``` bath
+```bath
 ├── public
 |  ├── IMgs
 |  |  ├── IMG.png
@@ -103,6 +104,7 @@ Instead of having separate pages scattered across different platforms, NOX bring
 |     └── Mahmoud_Elnagar.pdf
 └── vite.config.js
 ```
+
 ---
 
 # 🎨 Design Philosophy
@@ -111,13 +113,13 @@ NOX follows a modern **developer-focused UI**.
 
 The interface should feel:
 
-* Dark
-* Minimal
-* Futuristic
-* Fast
-* Clean
-* Interactive
-* Developer-oriented
+- Dark
+- Minimal
+- Futuristic
+- Fast
+- Clean
+- Interactive
+- Developer-oriented
 
 The goal isn't to make the website complicated.
 
@@ -128,6 +130,18 @@ The goal is to make it feel like:
 ---
 
 # 🧩 Main Sections
+
+## Website Request Email
+
+The website request form uses EmailJS. Copy `.env.example` to `.env`, then fill in the three values from your EmailJS account:
+
+```text
+VITE_EMAILJS_SERVICE_ID=...
+VITE_EMAILJS_TEMPLATE_ID=...
+VITE_EMAILJS_PUBLIC_KEY=...
+```
+
+Set the EmailJS template recipient to `{{to_email}}` and include the form variables `user_name`, `country`, `phone`, `user_email`, `description`, and `reference_link`. Configure `logo_file` and `ui_design_file` as file attachments in the template if you want the uploaded images to arrive with the email. Restart the Vite server after changing `.env`.
 
 ## 01 — Home
 
@@ -149,11 +163,11 @@ AI systems and digital experiences.
 
 The homepage can also contain:
 
-* Featured projects
-* Current focus
-* Tech stack
-* Short introduction
-* Quick statistics
+- Featured projects
+- Current focus
+- Tech stack
+- Short introduction
+- Quick statistics
 
 ---
 
@@ -175,11 +189,11 @@ AI, algorithms and computer science.
 
 This section can include:
 
-* Background
-* Interests
-* Developer journey
-* Current direction
-* Personal philosophy
+- Background
+- Interests
+- Developer journey
+- Current direction
+- Personal philosophy
 
 ---
 
@@ -189,42 +203,42 @@ A visual representation of my technical skills.
 
 ### Frontend
 
-* HTML
-* CSS
-* JavaScript
-* React
-* Next.js
-* Bootstrap
-* Vite
-* Three.js
+- HTML
+- CSS
+- JavaScript
+- React
+- Next.js
+- Bootstrap
+- Vite
+- Three.js
 
 ### Backend
 
-* Node.js
-* Express
-* Django
-* PHP
-* APIs
-* Servers
+- Node.js
+- Express
+- Django
+- PHP
+- APIs
+- Servers
 
 ### Programming
 
-* Python
-* JavaScript
-* SQL
+- Python
+- JavaScript
+- SQL
 
 ### Database
 
-* SQLite
-* SQL
+- SQLite
+- SQL
 
 ### Tools
 
-* Git
-* GitHub
-* VS Code
-* Linux
-* Terminal
+- Git
+- GitHub
+- VS Code
+- Linux
+- Terminal
 
 ---
 
@@ -345,11 +359,11 @@ A timeline showing how my skills evolved.
 ```text
 Web Development
        ↓
-HTML / CSS <<< 2024 
+HTML / CSS <<< 2024
        ↓
-JavaScript <<< 2024 
+JavaScript <<< 2024
        ↓
-React      <<< 2026 
+React      <<< 2026
        ↓
 Backend    <<< 2026
        ↓
@@ -402,14 +416,14 @@ Not everything needs to become a full project.
 
 Examples:
 
-* AI experiments
-* UI experiments
-* JavaScript experiments
-* Animation experiments
-* Computer vision
-* Automation
-* Algorithms
-* Random ideas
+- AI experiments
+- UI experiments
+- JavaScript experiments
+- Animation experiments
+- Computer vision
+- Automation
+- Algorithms
+- Random ideas
 
 This makes NOX feel like a **living development lab** instead of a static portfolio.
 
@@ -441,20 +455,20 @@ A roadmap for future development.
 
 ### Short Term
 
-* Improve JavaScript
-* Master React
-* Improve backend development
-* Learn TypeScript
-* Strengthen Git/GitHub
-* Build better projects
+- Improve JavaScript
+- Master React
+- Improve backend development
+- Learn TypeScript
+- Strengthen Git/GitHub
+- Build better projects
 
 ### Mid Term
 
-* Learn algorithms
-* Learn data structures
-* Study computer science fundamentals
-* Build advanced AI systems
-* Improve software architecture
+- Learn algorithms
+- Learn data structures
+- Study computer science fundamentals
+- Build advanced AI systems
+- Improve software architecture
 
 ### Long Term
 
@@ -525,24 +539,24 @@ No unnecessary forms unless needed.
 
 NOX should eventually support:
 
-* [x] Responsive design
-* [x] Modern UI
-* [x] Dark interface
-* [x] Project showcase
-* [x] Skills section
-* [x] About section
-* [x] Contact section
-* [ ] Interactive project filtering
-* [ ] Project search
-* [ ] Animated timeline
-* [ ] GitHub integration
-* [ ] Dynamic project data
-* [ ] Blog / Dev Notes
-* [ ] Live statistics
-* [ ] Command-style navigation
-* [ ] Keyboard shortcuts
-* [ ] Terminal interface
-* [ ] AI-powered interaction
+- [x] Responsive design
+- [x] Modern UI
+- [x] Dark interface
+- [x] Project showcase
+- [x] Skills section
+- [x] About section
+- [x] Contact section
+- [ ] Interactive project filtering
+- [ ] Project search
+- [ ] Animated timeline
+- [ ] GitHub integration
+- [ ] Dynamic project data
+- [ ] Blog / Dev Notes
+- [ ] Live statistics
+- [ ] Command-style navigation
+- [ ] Keyboard shortcuts
+- [ ] Terminal interface
+- [ ] AI-powered interaction
 
 ---
 
@@ -582,7 +596,7 @@ could display:
 
 [01] NOX AI
 [02] Infinity Platform
-[03] Profilio        
+[03] Profilio
 [04] Boyka Web       << ReMake
 [05] Delta Force     << ReMake
 [06] Betty Cookies   << ReMake
