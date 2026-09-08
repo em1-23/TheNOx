@@ -20,7 +20,7 @@ function Social() {
         <Link to="/"><h1 className='LogoName'>{"</>"} NoxCode</h1></Link>
       </div>
       <div className="Profiles">
-        <img src="/IMgs/Ironman.jpg" alt="ProfileLike" className='ProfilePhoto' />
+        <img src="/IMgs/IronNox.jpg" alt="ProfileLike" className='ProfilePhoto' />
         {SocialData.map((N)=> (
           <SocialStyle key={N.id} Name={N.Name} Link={N.Link} Top={N.Top} Right={N.Right} /> 
         ))}

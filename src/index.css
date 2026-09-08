@@ -671,6 +671,8 @@ h1.SpecialUnderName{
 .Section.H{
   .Header{
     position: relative;
+    margin: 0 auto;
+    width: 80%;
     margin-bottom: 5em;
     .Time{
       font-family: "Cairo";
@@ -678,6 +680,14 @@ h1.SpecialUnderName{
   }
 }
 
+@media (max-width:650px) {
+  .Section.H{
+    .Header{
+      margin-bottom: 10em;
+      font-size: 10px;
+    }
+  }  
+}
 .Experiments{
   .ExpTemplate{
     width: 400px;
@@ -815,12 +825,14 @@ h1.SpecialUnderName{
   width: 95%;
   justify-content: center;
   gap: 10em;
+  flex-wrap: wrap;
   align-items: center;
 }
 .TermStyleFlipMe{
   --ColorOfTheBackground:#690080;
-  width: 300px;
-  height: 400px;
+  --WidthTerm:300px;
+  width: var(--WidthTerm);
+  height: calc(var(--WidthTerm) * 1.2);
   perspective: 400px;
   position: relative;
   .Front,.Back{
@@ -870,6 +882,16 @@ h1.SpecialUnderName{
   }
 }
 
+@media (max-width:800px) {
+  .TermStyleFlipMe{
+    --WidthTerm:250px;
+    .Front{
+      h1{
+        font-size: 50px;
+      }
+    }
+  }
+}
 /* Four Fast Access Page : Website Create */
 
 .Section.WebsiteCreate{
@@ -1102,7 +1124,6 @@ h1.SpecialUnderName{
             width: 100%;
           }
           .InputBox{
-            /* box-sizing: border-box; */
             margin: .2rem 0;
           }
           .TextArea{
@@ -1126,8 +1147,9 @@ h1.SpecialUnderName{
   }
 }
 .Profiles{
-  width: 400px;
-  height: 400px;
+  --WidthMain:400px;
+  width: var(--WidthMain);
+  height: var(--WidthMain);
   position: relative;
   img{
     position: absolute;
@@ -1137,16 +1159,21 @@ h1.SpecialUnderName{
     border-radius: 50%;
     width: 82.5%;
     height: 82.5%;
+    &:hover{
+      scale: 1.02;
+    }
   }
   border: 1px solid #242424;
   border-radius: 50%;
   &:has(img:hover){
     border: 1px solid #3a3a3a;
   } 
+  margin: 2% auto;
 }
 .SocialIcon{
-  width: 50px;
-  height: 50px;
+  --IconWidth:50px;
+  width: var(--IconWidth);
+  height: var(--IconWidth);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1163,5 +1190,34 @@ h1.SpecialUnderName{
   }
   &:hover{
     scale: .9;
+  }
+}
+@media (max-width:800px) {
+  .Profiles{
+    --WidthMain:350px;
+  }
+  .SocialIcon{
+    --IconWidth:40px;
+  }
+}
+@media (max-width:500px) {
+  .Profiles{
+    --WidthMain:300px;
+  }
+  .SocialIcon{
+    --IconWidth:35px;
+  }
+}
+@media (max-width:400px) {
+  .Profiles{
+    --WidthMain:275px;
+  }
+}
+@media (max-width:320px) {
+  .Profiles{
+    --WidthMain:200px;
+  }
+  .SocialIcon{
+    --IconWidth:20px;
   }
 }
