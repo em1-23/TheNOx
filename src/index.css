@@ -154,6 +154,17 @@ h1.Name{
     align-items: center;
   }
 }
+@media (max-width:1000px) {
+  .Sections.Alpha{
+    align-items: center;
+    grid-template-columns: 2fr;
+    grid-template-rows: .5fr 1fr;
+    .Slider{
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
 .TechCard{
   width: 35px;
   height: 35px;
@@ -1220,4 +1231,17 @@ h1.SpecialUnderName{
   .SocialIcon{
     --IconWidth:20px;
   }
+}
+.BirthMassage{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 20%;
+  z-index: 1005;
+  backdrop-filter: blur(20px);
+  background-color: #0000000c;
+  text-align: center;
+  line-height: 8px;
 }

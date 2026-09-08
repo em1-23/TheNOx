@@ -8,18 +8,23 @@ import Goals from './Pages/Pages2/Goals'
 import Websitecreate from './Pages/Pages2/Websitecreate'
 import Social from './Pages/Pages2/social' 
 
+import Birthday from './Birthday'
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} ></Route>
-        <Route path="/tools" element={<Tools />}></Route>
-        <Route path="/experiments" element={<Experiments />}></Route>
-        <Route path="/goals" element={<Goals />}></Route>
-        <Route path="/websitecr" element={<Websitecreate />}></Route>
-        <Route path="/social" element={<Social />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Birthday />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} ></Route>
+          <Route path="/tools" element={<Tools />}></Route>
+          <Route path="/experiments" element={<Experiments />}></Route>
+          <Route path="/goals" element={<Goals />}></Route>
+          <Route path="/websitecr" element={<Websitecreate />}></Route>
+          <Route path="/social" element={<Social />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
